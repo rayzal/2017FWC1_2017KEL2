@@ -19,3 +19,4 @@ Route::get('/admin', function () {
     return view('admin');
 });
 
+Route::get('pengguna','penggunaController@awal');

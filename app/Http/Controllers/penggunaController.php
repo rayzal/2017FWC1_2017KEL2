@@ -8,5 +8,7 @@ use App\Http\Requests;
 
 class penggunaController extends Controller
 {
-    //
+    public function awal(){
+    	return "hello kelompok framework";
+    }
 }
