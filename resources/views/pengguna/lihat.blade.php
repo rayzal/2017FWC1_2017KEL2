@@ -1,0 +1,49 @@
+@extends('admin')
+{{-- @section('title')
+@stopsection --}}
+@section('content')
+<div class="panel panel-warning">
+	<div class="panel-heading">
+
+ <strong><a href="{{ url('pengguna') }}"><i style="color:#8a6d3b" class="fa text-default fa-chevron-left"></i></a>Detail Data Pengguna
+ </strong>
+ </div>
+<table class="table">
+<tr>
+ 		<td>ID</td>
+ 		<td>:</td>
+ 		<td>{{ $pengguna->id }}</td>
+ 	</tr>
+ 	<tr>
+ 		<td>Username</td>
+ 		<td>:</td>
+ 		<td>{{ $pengguna->username }}</td>
+ 	</tr>
+ 	<tr>
+ 		<td>Email</td>
+ 		<td>:</td>
+ 		<td>{{ $pengguna->email }}</td>
+ 	</tr>
+ 	<tr>
+ 		<td>Password</td>
+ 		<td>:</td>
+ 		<td>{{ $pengguna->password }}</td>
+ 	</tr>
+ 	<tr>
+ 		<td>level</td>
+ 		<td>:</td>
+ 		<td>{{ $pengguna->level }}</td>
+ 	</tr>
+ 		<tr>
+ 		<td class="col-xs-4">Dibuat tanggal</td>
+ 		<td class="col-xs-1">:</td>
+ 		<td>{{ $pengguna->created_at }}</td>
+ 	</tr>
+ 		<tr>
+ 		<td class="col-xs-4">Diperbaharui tanggal</td>
+ 		<td class="col-xs-1">:</td>
+ 		<td>{{ $pengguna->updated_at }}</td>
+ 	</tr>
+ </table>
+ </div>
+@stop
