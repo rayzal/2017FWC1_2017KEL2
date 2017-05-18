@@ -18,4 +18,9 @@ class tamu extends Model
     	return $this->hasMany(check_in::class,'tamu_id');
     	
     }
+
+  public function getUsernameAttribute()
+    {
+        return $this->pengguna->username;
+       }
 }

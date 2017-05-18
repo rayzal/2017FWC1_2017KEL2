@@ -10,9 +10,19 @@ class fasilitas extends Model
     protected $fillable = ['nama_fasilitas'];
 
    public function fasilitas_kamar(){
-    	return $this->belongsToMany(fasilitas_kamar::class,'fasilitas_id');
+    	return $this->hasMany(fasilitas_kamar::class,'fasilitas_id');
     	
     }
+
+  public function listFasilitas()
+  {
+    $out = [];
+    foreach ($this->all() as $flts){
+      $out[$flts->id] = "{$flts->nama_fasilitas}";
+
+    }
+    return $out;
+  }
 
 
 }

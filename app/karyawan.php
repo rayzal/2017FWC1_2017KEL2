@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class karyawan extends Model
 {
 	protected $table = 'karyawan'; 
-    protected $fillable = ['nama_karyawan','alamat_karyawan','no_telepon_karyawan','email'];
+    // protected $fillable = ['nama_karyawan','alamat_karyawan','no_telepon_karyawan','email'];
     protected  $guarded = ['id'];  
 
 
@@ -20,5 +20,9 @@ class karyawan extends Model
     	
     }
 
+    public function getUsernameAttribute()
+    {
+        return $this->pengguna->username;
+       }
 
 }

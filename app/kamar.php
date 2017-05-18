@@ -21,7 +21,17 @@ class kamar extends Model
        }
 
     public function fasilitas_kamar(){
-    	return $this->belongsToMany(fasilitas_kamar::class,'kamar_id');
+    	return $this->hasMany(fasilitas_kamar::class,'kamar_id');
     	
     }
+
+  public function listKamar()
+  {
+    $out = [];
+    foreach ($this->all() as $kmr){
+      $out[$kmr->id] = "{$kmr->kode_kamar}";
+
+    }
+    return $out;
+  }
 }
