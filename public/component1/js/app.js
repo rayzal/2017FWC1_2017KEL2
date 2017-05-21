@@ -377,8 +377,8 @@ $("#send-mail").click(function () {
 
 function initializeMap() {
 
-    var lat = '44.8164056'; //Set your latitude.
-    var lon = '20.46090424'; //Set your longitude.
+    var lat = '-0.469765'; //Set your latitude.
+    var lon = '117.154124'; //Set your longitude.
 
     var centerLon = lon - 0.0105;
 
@@ -400,7 +400,7 @@ function initializeMap() {
     });
 
     var infowindow = new google.maps.InfoWindow({
-        content: "Your content goes here!"
+        content: "Kami Ada Disini!"
     });
 
     google.maps.event.addListener(marker, 'click', function () {

@@ -5,8 +5,8 @@
 <div class="panel panel-default">
 <div class="panel-heading">
 <strong>Seluruh Data tamu</strong>
-<a href="{{url('tamu/tambah')}}" class="btn btn-xs btn-primary pull-right">
- <i class="fa fa-plus"></i>tamu</a>
+{{-- <a href="{{url('tamu/tambah')}}" class="btn btn-xs btn-primary pull-right">
+ <i class="fa fa-plus"></i>tamu</a> --}}
  <div class="clearfix"></div>
  </div>
  <table class="table">

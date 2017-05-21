@@ -21,12 +21,18 @@ class penggunaController extends Controller
     public function simpan(Request $input)
     {   
          // validasi
+         // 
+    
          $this->validate($input,[
             'username'=>'required',
             'email'=>'required',
             'password'=>'required',
+            'level'=>'required|numeric',
             ]);
 
+         $messages = [
+        'username.required'=> 'please fill Broadcast Name field',
+         ];
 
     	$pengguna = new Pengguna;
     	$pengguna -> username = $input->username;
@@ -48,6 +54,14 @@ class penggunaController extends Controller
          return view('pengguna.lihat')->with(array('pengguna'=>$pengguna));      
 }
     public  function update($id, Request $input){
+
+         $this->validate($input,[
+            'username'=>'required',
+            'email'=>'required',
+            'password'=>'required',
+            'level'=>'required|numeric',
+            ]);
+
         $pengguna = Pengguna::find($id);
         $pengguna -> username = $input->username;
         $pengguna -> email = $input->email;

@@ -27,7 +27,7 @@
  	<tr>
  		<td>Harga kamar</td>
  		<td>:</td>
- 		<td>{{ $kamar->harga->harga_kamar }}</td>
+ 		<td>{{ $kamar->harga_kamar }}</td>
  	</tr>
  		<tr>
  		<td class="col-xs-4">Dibuat tanggal</td>

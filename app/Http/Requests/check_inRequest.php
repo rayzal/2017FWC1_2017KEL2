@@ -24,7 +24,7 @@ class check_inRequest extends Request
     public function rules()
     {
          $validasi= [
-        'tgl_check_in'=>'required',
+        'tgl_check_in'=>'required|after:yesterday',
         'karyawan_id'=>'required',
         'tamu_id'=>'required',
         ];

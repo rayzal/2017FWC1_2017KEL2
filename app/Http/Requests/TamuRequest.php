@@ -25,11 +25,12 @@ class TamuRequest extends Request
     {
         $validasi= [
         'nama_tamu'=>'required',
-        'no_identitas_tamu'=>'required|integer',
+        'no_identitas_tamu'=>'required|numeric',
         'alamat_tamu'=>'required',
-        'no_telepon_tamu'=>'required|integer',
+        'no_telepon_tamu'=>'required|regex:/(08)[0-9]{10}/',
         'email'=>'required',
         'username'=>'required',
+        'password'=>'required',
         ];
         if($this->is('tamu/tambah')){
             $validasi['password']='required';

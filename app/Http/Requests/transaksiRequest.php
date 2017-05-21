@@ -25,7 +25,7 @@ class transaksiRequest extends Request
     {
         $validasi= [
         'lama_menginap'=>'required|integer',
-        'total_harga'=>'required|integer',
+        'total_harga'=>'required|numeric',
         'check_in_id'=>'required',
         'kamar_id'=>'required',
         ];

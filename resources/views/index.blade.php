@@ -10,12 +10,11 @@
     <head>
         <meta charset=utf-8>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pluton Theme by BraphBerry.com</title>
+        <title>Paragon Hotel</title>
         <!-- Load Roboto font -->
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <!-- Load css styles -->
-        <link rel="stylesheet" type="text/css" href="{{('
-component1/css/bootstrap.css ')}}" />
+        <link rel="stylesheet" type="text/css" href="{{('component1/css/bootstrap.css ')}}" />
         <link rel="stylesheet" type="text/css" href="{{(' component1/css/bootstrap-responsive.css ')}}" />
         <link rel="stylesheet" type="text/css" href="{{(' component1/css/style.css ')}}" />
         <link rel="stylesheet" type="text/css" href="{{(' component1/css/pluton.css ')}}" />
@@ -52,9 +51,63 @@ component1/css/bootstrap.css ')}}" />
                             <li><a href="#service">Pelayanan</a></li>
                             <li><a href="#portfolio">Kamar</a></li>
                             <li><a href="#about">About</a></li>
-                            <li><a href="#clients">Clients</a></li>
-                            <li><a href="#price">Price</a></li>
+                            <!-- <li><a href="#clients">Clients</a></li>
+                            <li><a href="#price">Price</a></li> -->
                             <li><a href="#contact">Contact</a></li>
+                            
+                            <!-- <li><p class="navbar-text">Already have an account?</p></li> -->
+                            
+                            <li class="dropdown" >
+                            
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                                <ul id="login-dp" class="dropdown-menu">
+                                    <li>
+                                         <div class="row">                                                
+                                                <!-- anu -->
+                                                <div class="clearfix"></div>
+                                                <div class="col-md-4 col-md-offset-4">
+                                                    @if (count($errors) > 0)
+                                                    <div class="alert alert-danger">
+                                                        <ul>
+                                                            @foreach ($errors->all() as $error)
+                                                            <li>{{ $error }}</li>
+                                                            @endforeach
+                                                        </ul>
+                                                    </div>
+                                                    @endif
+                                                    <div class="panel panel-default">
+                                                        
+                                                        {!! Form::open(['url'=>'login','class'=>'form-horizontal']) !!}
+                                                        <div class="form-group">
+                                                            <label class="col-sm-4 control-label">Username</label>
+                                                            <div class="col-sm-8">
+                                                                {!! Form::text('username',null,['class'=>'form-control','placeholder'=>"Username"]) !!}
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-4 control-label">Password</label>
+                                                            <div class="col-sm-8">
+                                                                {!! Form::password('password',['class'=>'form-control','placeholder'=>"Password"]) !!}
+                                                            </div>
+                                                        </div>
+                                                        <div style="width: 100%;text-align: right;">
+                                                            <button class="btn btn-primary">    <i class="fa fa-lock"></i>Masuk</button>
+                                                            <button type="reset" class="btn btn-danger">    <i class="fa fa-undo"></i>Ulangi</button>
+
+                                                        </div>
+                                                        {!! Form::close() !!}
+                                                    </div>
+                                                </div>
+
+                                                <!-- wes -->
+                                                <div class="bottom text-center" style="color: #363636;">
+                                                    pengguna baru? <a href="{{url('lamandaftartamu')}}"><b>Register</b></a>
+                                                </div>
+                                         </div>
+                                    </li>
+                                </ul>
+                            </li>
+
                         </ul>
                     </div>
                     <!-- End main navigation -->
@@ -72,34 +125,32 @@ component1/css/bootstrap.css ')}}" />
                 <div class="container">
                     <!-- Start first slide -->
                     <div class="da-slide">
-                        <h2 class="fittext2">Welcome to pluton theme</h2>
-                        <h4>Clean & responsive</h4>
-                        <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
-                        <a href="#" class="da-link button">Read more</a>
+                        <h2 class="fittext2">Selamat Datang di Paragon Hotel</h2>
+                        <h4>Paragon Hotel</h4>
+                        <p>Hotel bintang lima berlian yang terletak tepat dipusat kota Samarinda. Berada di 23 hektar taman tropis dan didukung dengan fasilitas rekreasi yang luas, Paragon Hotel telah menjadi oasis dimana orang bisa rileks dan luput dari keramaian dan hiruk pikuk kota.</p>
                         <div class="da-img">
-                            <img src="component1/images/Slider01.png" alt="image01" width="320">
+                            <img src="component1/images/Slider01.png" alt="image01" width="240">
                         </div>
                     </div>
                     <!-- End first slide -->
                     <!-- Start second slide -->
                     <div class="da-slide">
-                        <h2>Easy management</h2>
-                        <h4>Easy to use</h4>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                        <a href="#" class="da-link button">Read more</a>
+                        <h2>PELAYANAN</h2>
+                        <h4>Pelayanan-Pelayanan yang memuaskan</h4>
+                        <p>Paragon Hotel sangat memperhatikan kepuasan tamu, banyak sekali pelayanan pelayanan yang di suguhkan sehingga tamu akan merasa nyaman dan puas.</p>
+                        
                         <div class="da-img">
-                            <img src="component1/images/Slider02.png" width="320" alt="image02">
+                            <img src="component1/images/Slider02.png" width="240" alt="image02">
                         </div>
                     </div>
                     <!-- End second slide -->
                     <!-- Start third slide -->
                     <div class="da-slide">
-                        <h2>Revolution</h2>
-                        <h4>Customizable</h4>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                        <a href="#" class="da-link button">Read more</a>
+                        <h2>FASILITAS</h2>
+                        <h4>Fasilitas yang lengkap dan menarik</h4>
+                        <p>Paragon Hotel diciptakan dengan konsep elegan dan mewah sehingga memiliki fasilitas-fasilitas kelas atas. selain itu, Kebersihan Hotel Paragon sangat terjaga sehingga tamu akan merasa nyaman.</p>
                         <div class="da-img">
-                            <img src="component1/images/Slider03.png" width="320" alt="image03">
+                            <img src="component1/images/Slider03.png" width="240" alt="image03">
                         </div>
                     </div>
                     <!-- Start third slide -->
@@ -118,37 +169,66 @@ component1/css/bootstrap.css ')}}" />
             <div class="container">
                 <!-- Start title section -->
                 <div class="title">
-                    <h1>What We Do?</h1>
+                    <h1>Pelayanan Paragon Hotel</h1>
                     <!-- Section's title goes here -->
-                    <p>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
+                    <p>Paragon Hotel menyediakan fasilitas-fasilitas yang memiliki konsep elegan dan mewah</p>
                     <!--Simple description for section goes here. -->
                 </div>
                 <div class="row-fluid">
                     <div class="span4">
                         <div class="centered service">
                             <div class="circle-border zoom-in">
-                                <img class="img-circle" src="component1/images/Service1.png" alt="service 1">
+                                <img class="img-circle" src="component1/images/Balroom.jpg" alt="service 1">
                             </div>
-                            <h3>Modern Design</h3>
-                            <p>We Create Modern And Clean Theme For Your Business Company.</p>
+                            <h3>Ballroom</h3>
+                            <p>Dengan Fasilitas Ballroom yang luas dan bersih anda dapat mengadakan pertemuan atau rapat dengan nyaman.</p>
                         </div>
                     </div>
                     <div class="span4">
                         <div class="centered service">
                             <div class="circle-border zoom-in">
-                                <img class="img-circle" src="component1/images/Service2.png" alt="service 2" />
+                                <img class="img-circle" src="component1/images/kol.jpg" alt="service 2" />
                             </div>
-                            <h3>Powerfull Theme</h3>
-                            <p>We Create Modern And Powerful Theme With Lots Animation And Features</p>
+                            <h3>Kolam Renang</h3>
+                            <p>Bersantai bersama keluarga dan teman-teman serta menikmati indah dan segarnya kolam renang. </p>
                         </div>
                     </div>
                     <div class="span4">
                         <div class="centered service">
                             <div class="circle-border zoom-in">
-                                <img class="img-circle" src="component1/images/Service3.png" alt="service 3">
+                                <img class="img-circle" src="component1/images/Restaurant1.jpg" alt="service 3">
                             </div>
-                            <h3>Clean Code</h3>
-                            <p>We Create Modern And Powerful Html5 And CSS3 Code Easy For Read And Customize.</p>
+                            <h3>Restaurant</h3>
+                            <p>Dekorasi Restaurant yang elegan membuat tamu merasa nyaman dan rileks. </p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row-fluid">
+                    <div class="span4">
+                        <div class="centered service">
+                            <div class="circle-border zoom-in">
+                                <img class="img-circle" src="component1/images/Spa.jpg" alt="service 4">
+                            </div>
+                            <h3>SPA</h3>
+                            <p>Paragon Hotel juga menyediakan Fasilitas Spa untuk perawatan tubuh, kesehatan, kebugaran dan kenyamanan anda.</p>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="centered service">
+                            <div class="circle-border zoom-in">
+                                <img class="img-circle" src="component1/images/Gym.jpg" alt="service 5">
+                            </div>
+                            <h3>GYM</h3>
+                            <p>Meluangkan waktu untuk berolahraga didalam ruangan untuk kesehatan dan kebugaran anda.</p>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="centered service">
+                            <div class="circle-border zoom-in">
+                                <img class="img-circle" src="component1/images/Lap.jpg" alt="service 4">
+                            </div>
+                            <h3>Lapangan Golf</h3>
+                            <p>Berolahraga sambil menikmati indahnya alam dengan Bermain Golf.</p>
                         </div>
                     </div>
                 </div>
@@ -160,48 +240,58 @@ component1/css/bootstrap.css ')}}" />
             <div class="triangle"></div>
             <div class="container">
                 <div class=" title">
-                    <h1>Have You Seen our Works?</h1>
-                    <p>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
+                    <h1>Kamar</h1>
+                    <p>Paragon Hotel menyediakan kamar-kamar yang cukup mewah, aman, dan nyaman.</p>
                 </div>
                 <ul class="nav nav-pills">
                     <li class="filter" data-filter="all">
                         <a href="#noAction">All</a>
                     </li>
-                    <li class="filter" data-filter="web">
-                        <a href="#noAction">Web</a>
+                    <li class="filter" data-filter="ekonomi">
+                        <a href="#noAction">Ekonomi</a>
                     </li>
-                    <li class="filter" data-filter="photo">
-                        <a href="#noAction">Photo</a>
+                    <li class="filter" data-filter="vip">
+                        <a href="#noAction">VIP</a>
                     </li>
-                    <li class="filter" data-filter="identity">
+                    <!-- <li class="filter" data-filter="identity">
                         <a href="#noAction">Identity</a>
-                    </li>
+                    </li> -->
                 </ul>
                 <!-- Start details for portfolio project 1 -->
                 <div id="single-project">
                     <div id="slidingDiv" class="toggleDiv row-fluid single-project">
                         <div class="span6">
-                            <img src="component1/images/Portfolio01.png" alt="project 1" />
+                            <img src="component1/images/kamar/vip1.jpeg" alt="project 1" />
                         </div>
                         <div class="span6">
                             <div class="project-description">
                                 <div class="project-title clearfix">
-                                    <h3>Webste for Some Client</h3>
+                                    <h3>VIP Room 001</h3>
                                     <span class="show_hide close">
                                         <i class="icon-cancel"></i>
                                     </span>
                                 </div>
-                                <div class="project-info">
+                                <div class="project-info">                                    
                                     <div>
-                                        <span>Client</span>Some Client Name</div>
+                                        <span>Fasilitas</span>Tempat tidur nyaman, TV Layar Datar, Kulkas, AC</div>
                                     <div>
-                                        <span>Date</span>July 2013</div>
+                                        <span>Check-in</span>14.00</div>
                                     <div>
-                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
-                                    <div>
-                                        <span>Link</span>http://examplecomp.com</div>
+                                        <span>Check-out</span>12.00</div>
+
+                                    
                                 </div>
-                                <p>Believe in yourself! Have faith in your abilities! Without a humble but reasonable confidence in your own powers you cannot be successful or happy.</p>
+                                <div style="text-align: center;">
+                                    Silahkan <strong><a href="#" >Login</a></strong> untuk melakukan pemesanan
+                                </div>
+
+                               
+                                <ul>
+                                <p><strong>Note:</strong>
+                                <li>
+                                Untuk pasangan beda jenis kelamin akan dimintakan dokumen yang menyatakan memiliki hubungan suami istri atau hubungan darah. Alkohol sangat dilarang di properti ini dan merupakan properti bebas asap rokok. Dan pemesanan yang telah dikonfirmasi tidak bisa dibatalkan.</li>
+                                <li>Menyerahkan data identitas pada Resepsionis Hotel</li></p>
+                                </ul>                                                                                        
                             </div>
                         </div>
                     </div>
@@ -209,27 +299,34 @@ component1/css/bootstrap.css ')}}" />
                     <!-- Start details for portfolio project 2 -->
                     <div id="slidingDiv1" class="toggleDiv row-fluid single-project">
                         <div class="span6">
-                            <img src="component1/images/Portfolio02.png" alt="project 2">
+                            <img src="component1/images/kamar/vip2.jpeg" alt="project 2">
                         </div>
                         <div class="span6">
                             <div class="project-description">
                                 <div class="project-title clearfix">
-                                    <h3>Webste for Some Client</h3>
+                                    <h3>VIP Room 002</h3>
                                     <span class="show_hide close">
                                         <i class="icon-cancel"></i>
                                     </span>
                                 </div>
-                                <div class="project-info">
+                                <div class="project-info">                                    
                                     <div>
-                                        <span>Client</span>Some Client Name</div>
+                                        <span>Fasilitas</span>Tempat tidur nyaman, TV Layar Datar, Kulkas, AC</div>
                                     <div>
-                                        <span>Date</span>July 2013</div>
+                                        <span>Check-in</span>14.00</div>
                                     <div>
-                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
-                                    <div>
-                                        <span>Link</span>http://examplecomp.com</div>
+                                        <span>Check-out</span>12.00</div>
                                 </div>
-                                <p>Life is a song - sing it. Life is a game - play it. Life is a challenge - meet it. Life is a dream - realize it. Life is a sacrifice - offer it. Life is love - enjoy it.</p>
+                                <div style="text-align: center;">
+                                    Silahkan <strong><a href="#" >Login</a></strong> untuk melakukan pemesanan
+                                </div>
+                               
+                                <ul>
+                                <p><strong>Note:</strong>
+                                <li>
+                                Untuk pasangan beda jenis kelamin akan dimintakan dokumen yang menyatakan memiliki hubungan suami istri atau hubungan darah. Alkohol sangat dilarang di properti ini dan merupakan properti bebas asap rokok. Dan pemesanan yang telah dikonfirmasi tidak bisa dibatalkan.</li>
+                                <li>Menyerahkan data identitas pada Resepsionis Hotel</li></p>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -237,27 +334,35 @@ component1/css/bootstrap.css ')}}" />
                     <!-- Start details for portfolio project 3 -->
                     <div id="slidingDiv2" class="toggleDiv row-fluid single-project">
                         <div class="span6">
-                            <img src="component1/images/Portfolio03.png" alt="project 3">
+                            <img src="component1/images/kamar/vip3.jpeg" alt="project 3">
                         </div>
                         <div class="span6">
                             <div class="project-description">
                                 <div class="project-title clearfix">
-                                    <h3>Webste for Some Client</h3>
+                                    <h3>VIP Room 003</h3>
                                     <span class="show_hide close">
                                         <i class="icon-cancel"></i>
                                     </span>
                                 </div>
-                                <div class="project-info">
+                                <div class="project-info">                                    
                                     <div>
-                                        <span>Client</span>Some Client Name</div>
+                                        <span>Fasilitas</span>Tempat tidur nyaman, TV Layar Datar, Kulkas, AC</div>
                                     <div>
-                                        <span>Date</span>July 2013</div>
+                                        <span>Check-in</span>14.00</div>
                                     <div>
-                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
-                                    <div>
-                                        <span>Link</span>http://examplecomp.com</div>
+                                        <span>Check-out</span>12.00</div>
                                 </div>
-                                <p>How far you go in life depends on your being tender with the young, compassionate with the aged, sympathetic with the striving and tolerant of the weak and strong. Because someday in your life you will have been all of these.</p>
+                                <div style="text-align: center;">
+                                    Silahkan <strong><a href="#" >Login</a></strong> untuk melakukan pemesanan
+                                </div>
+                                
+                                
+                                <ul>
+                                <p><strong>Note:</strong>
+                                <li>
+                                Untuk pasangan beda jenis kelamin akan dimintakan dokumen yang menyatakan memiliki hubungan suami istri atau hubungan darah. Alkohol sangat dilarang di properti ini dan merupakan properti bebas asap rokok. Dan pemesanan yang telah dikonfirmasi tidak bisa dibatalkan.</li>
+                                <li>Menyerahkan data identitas pada Resepsionis Hotel</li></p>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -265,27 +370,35 @@ component1/css/bootstrap.css ')}}" />
                     <!-- Start details for portfolio project 4 -->
                     <div id="slidingDiv3" class="toggleDiv row-fluid single-project">
                         <div class="span6">
-                            <img src="component1/images/Portfolio04.png" alt="project 4">
+                            <img src="component1/images/kamar/vip4.jpeg" alt="project 4">
                         </div>
                         <div class="span6">
                             <div class="project-description">
                                 <div class="project-title clearfix">
-                                    <h3>Project for Some Client</h3>
+                                    <h3>VIP Room 004</h3>
                                     <span class="show_hide close">
                                         <i class="icon-cancel"></i>
                                     </span>
                                 </div>
-                                <div class="project-info">
+                                <div class="project-info">                                    
                                     <div>
-                                        <span>Client</span>Some Client Name</div>
+                                        <span>Fasilitas</span>Tempat tidur nyaman, TV Layar Datar, Kulkas, AC</div>
                                     <div>
-                                        <span>Date</span>July 2013</div>
+                                        <span>Check-in</span>14.00</div>
                                     <div>
-                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
-                                    <div>
-                                        <span>Link</span>http://examplecomp.com</div>
+                                        <span>Check-out</span>12.00</div>
                                 </div>
-                                <p>Life's but a walking shadow, a poor player, that struts and frets his hour upon the stage, and then is heard no more; it is a tale told by an idiot, full of sound and fury, signifying nothing.</p>
+                                <div style="text-align: center;">
+                                    Silahkan <strong><a href="#" >Login</a></strong> untuk melakukan pemesanan
+                                </div>
+                                
+
+                                <ul>
+                                <p><strong>Note:</strong>
+                                <li>
+                                Untuk pasangan beda jenis kelamin akan dimintakan dokumen yang menyatakan memiliki hubungan suami istri atau hubungan darah. Alkohol sangat dilarang di properti ini dan merupakan properti bebas asap rokok. Dan pemesanan yang telah dikonfirmasi tidak bisa dibatalkan.</li>
+                                <li>Menyerahkan data identitas pada Resepsionis Hotel</li></p>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -293,27 +406,35 @@ component1/css/bootstrap.css ')}}" />
                     <!-- Start details for portfolio project 5 -->
                     <div id="slidingDiv4" class="toggleDiv row-fluid single-project">
                         <div class="span6">
-                            <img src="component1/images/Portfolio05.png" alt="project 5">
+                            <img src="component1/images/kamar/vip5.jpeg" alt="project 5">
                         </div>
                         <div class="span6">
                             <div class="project-description">
                                 <div class="project-title clearfix">
-                                    <h3>Webste for Some Client</h3>
+                                    <h3>VIP Room 005</h3>
                                     <span class="show_hide close">
                                         <i class="icon-cancel"></i>
                                     </span>
                                 </div>
-                                <div class="project-info">
+                                <div class="project-info">                                    
                                     <div>
-                                        <span>Client</span>Some Client Name</div>
+                                        <span>Fasilitas</span>Tempat tidur nyaman, TV Layar Datar, Kulkas, AC</div>
                                     <div>
-                                        <span>Date</span>July 2013</div>
+                                        <span>Check-in</span>14.00</div>
                                     <div>
-                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
-                                    <div>
-                                        <span>Link</span>http://examplecomp.com</div>
+                                        <span>Check-out</span>12.00</div>
                                 </div>
-                                <p>We need to give each other the space to grow, to be ourselves, to exercise our diversity. We need to give each other space so that we may both give and receive such beautiful things as ideas, openness, dignity, joy, healing, and inclusion.</p>
+                                <div style="text-align: center;">
+                                    Silahkan <strong><a href="#" >Login</a></strong> untuk melakukan pemesanan
+                                </div>
+                               
+
+                                <ul>
+                                <p><strong>Note:</strong>
+                                <li>
+                                Untuk pasangan beda jenis kelamin akan dimintakan dokumen yang menyatakan memiliki hubungan suami istri atau hubungan darah. Alkohol sangat dilarang di properti ini dan merupakan properti bebas asap rokok. Dan pemesanan yang telah dikonfirmasi tidak bisa dibatalkan.</li>
+                                <li>Menyerahkan data identitas pada Resepsionis Hotel</li></p>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -321,27 +442,35 @@ component1/css/bootstrap.css ')}}" />
                     <!-- Start details for portfolio project 6 -->
                     <div id="slidingDiv5" class="toggleDiv row-fluid single-project">
                         <div class="span6">
-                            <img src="component1/images/Portfolio06.png" alt="project 6">
+                            <img src="component1/images/kamar/eko1.jpeg" alt="project 6">
                         </div>
                         <div class="span6">
                             <div class="project-description">
                                 <div class="project-title clearfix">
-                                    <h3>Webste for Some Client</h3>
+                                    <h3>Standard Room 001</h3>
                                     <span class="show_hide close">
                                         <i class="icon-cancel"></i>
                                     </span>
                                 </div>
-                                <div class="project-info">
+                                <div class="project-info">                                    
                                     <div>
-                                        <span>Client</span>Some Client Name</div>
+                                        <span>Fasilitas</span>Tempat tidur nyaman, TV Layar Datar, Kulkas, AC</div>
                                     <div>
-                                        <span>Date</span>July 2013</div>
+                                        <span>Check-in</span>14.00</div>
                                     <div>
-                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
-                                    <div>
-                                        <span>Link</span>http://examplecomp.com</div>
+                                        <span>Check-out</span>12.00</div>
                                 </div>
-                                <p>I went to the woods because I wished to live deliberately, to front only the essential facts of life, and see if I could not learn what it had to teach, and not, when I came to die, discover that I had not lived.</p>
+                                <div style="text-align: center;">
+                                    Silahkan <strong><a href="#" >Login</a></strong> untuk melakukan pemesanan
+                                </div>
+                                
+                                
+                                <ul>
+                                <p><strong>Note:</strong>
+                                <li>
+                                Untuk pasangan beda jenis kelamin akan dimintakan dokumen yang menyatakan memiliki hubungan suami istri atau hubungan darah. Alkohol sangat dilarang di properti ini dan merupakan properti bebas asap rokok. Dan pemesanan yang telah dikonfirmasi tidak bisa dibatalkan.</li>
+                                <li>Menyerahkan data identitas pada Resepsionis Hotel</li></p>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -349,27 +478,35 @@ component1/css/bootstrap.css ')}}" />
                     <!-- Start details for portfolio project 7 -->
                     <div id="slidingDiv6" class="toggleDiv row-fluid single-project">
                         <div class="span6">
-                            <img src="component1/images/Portfolio07.png" alt="project 7">
+                            <img src="component1/images/kamar/eko2.jpeg" alt="project 7">
                         </div>
                         <div class="span6">
                             <div class="project-description">
                                 <div class="project-title clearfix">
-                                    <h3>Webste for Some Client</h3>
+                                    <h3>Standard Room 002</h3>
                                     <span class="show_hide close">
                                         <i class="icon-cancel"></i>
                                     </span>
                                 </div>
-                                <div class="project-info">
+                                <div class="project-info">                                    
                                     <div>
-                                        <span>Client</span>Some Client Name</div>
+                                        <span>Fasilitas</span>Tempat tidur nyaman, TV Layar Datar, Kulkas, AC</div>
                                     <div>
-                                        <span>Date</span>July 2013</div>
+                                        <span>Check-in</span>14.00</div>
                                     <div>
-                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
-                                    <div>
-                                        <span>Link</span>http://examplecomp.com</div>
+                                        <span>Check-out</span>12.00</div>
                                 </div>
-                                <p>Always continue the climb. It is possible for you to do whatever you choose, if you first get to know who you are and are willing to work with a power that is greater than ourselves to do it.</p>
+                                <div style="text-align: center;">
+                                    Silahkan <strong><a href="#" >Login</a></strong> untuk melakukan pemesanan
+                                </div>
+                                
+                                
+                                <ul>
+                                <p><strong>Note:</strong>
+                                <li>
+                                Untuk pasangan beda jenis kelamin akan dimintakan dokumen yang menyatakan memiliki hubungan suami istri atau hubungan darah. Alkohol sangat dilarang di properti ini dan merupakan properti bebas asap rokok. Dan pemesanan yang telah dikonfirmasi tidak bisa dibatalkan.</li>
+                                <li>Menyerahkan data identitas pada Resepsionis Hotel</li></p>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -377,27 +514,35 @@ component1/css/bootstrap.css ')}}" />
                     <!-- Start details for portfolio project 8 -->
                     <div id="slidingDiv7" class="toggleDiv row-fluid single-project">
                         <div class="span6">
-                            <img src="component1/images/Portfolio08.png" alt="project 8">
+                            <img src="component1/images/kamar/eko3.jpeg" alt="project 8">
                         </div>
                         <div class="span6">
                             <div class="project-description">
                                 <div class="project-title clearfix">
-                                    <h3>Webste for Some Client</h3>
+                                    <h3>Standard Room 003</h3>
                                     <span class="show_hide close">
                                         <i class="icon-cancel"></i>
                                     </span>
                                 </div>
-                                <div class="project-info">
+                                <div class="project-info">                                    
                                     <div>
-                                        <span>Client</span>Some Client Name</div>
+                                        <span>Fasilitas</span>Tempat tidur nyaman, TV Layar Datar, Kulkas, AC</div>
                                     <div>
-                                        <span>Date</span>July 2013</div>
+                                        <span>Check-in</span>14.00</div>
                                     <div>
-                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
-                                    <div>
-                                        <span>Link</span>http://examplecomp.com</div>
+                                        <span>Check-out</span>12.00</div>
                                 </div>
-                                <p>What if you gave someone a gift, and they neglected to thank you for it - would you be likely to give them another? Life is the same way. In order to attract more of the blessings that life has to offer, you must truly appreciate what you already have.</p>
+                                <div style="text-align: center;">
+                                    Silahkan <strong><a href="#" >Login</a></strong> untuk melakukan pemesanan
+                                </div>
+                                
+
+                                <ul>
+                                <p><strong>Note:</strong>
+                                <li>
+                                Untuk pasangan beda jenis kelamin akan dimintakan dokumen yang menyatakan memiliki hubungan suami istri atau hubungan darah. Alkohol sangat dilarang di properti ini dan merupakan properti bebas asap rokok. Dan pemesanan yang telah dikonfirmasi tidak bisa dibatalkan.</li>
+                                <li>Menyerahkan data identitas pada Resepsionis Hotel</li></p>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -405,128 +550,135 @@ component1/css/bootstrap.css ')}}" />
                     <!-- Start details for portfolio project 9 -->
                     <div id="slidingDiv8" class="toggleDiv row-fluid single-project">
                         <div class="span6">
-                            <img src="component1/images/Portfolio09.png" alt="project 9">
+                            <img src="component1/images/kamar/eko4.jpeg" alt="project 9">
                         </div>
                         <div class="span6">
                             <div class="project-description">
                                 <div class="project-title clearfix">
-                                    <h3>Webste for Some Client</h3>
+                                    <h3>Standard Room 004</h3>
                                     <span class="show_hide close">
                                         <i class="icon-cancel"></i>
                                     </span>
                                 </div>
-                                <div class="project-info">
+                                <div class="project-info">                                    
                                     <div>
-                                        <span>Client</span>Some Client Name</div>
+                                        <span>Fasilitas</span>Tempat tidur nyaman, TV Layar Datar, Kulkas, AC</div>
                                     <div>
-                                        <span>Date</span>July 2013</div>
+                                        <span>Check-in</span>14.00</div>
                                     <div>
-                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
-                                    <div>
-                                        <span>Link</span>http://examplecomp.com</div>
+                                        <span>Check-out</span>12.00</div>
                                 </div>
-                                <p>I learned that we can do anything, but we can't do everything... at least not at the same time. So think of your priorities not in terms of what activities you do, but when you do them. Timing is everything.</p>
+                                <div style="text-align: center;">
+                                    Silahkan <strong><a href="#" >Login</a></strong> untuk melakukan pemesanan
+                                </div>
+                                
+                                <ul>
+                                <p><strong>Note:</strong>
+                                <li>
+                                Untuk pasangan beda jenis kelamin akan dimintakan dokumen yang menyatakan memiliki hubungan suami istri atau hubungan darah. Alkohol sangat dilarang di properti ini dan merupakan properti bebas asap rokok. Dan pemesanan yang telah dikonfirmasi tidak bisa dibatalkan.</li>
+                                <li>Menyerahkan data identitas pada Resepsionis Hotel</li></p>
+                                </ul>
                             </div>
                         </div>
                     </div>
                     <!-- End details for portfolio project 9 -->
                     <ul id="portfolio-grid" class="thumbnails row">
-                        <li class="span4 mix web">
+                        <li class="span4 mix vip">
                             <div class="thumbnail">
-                                <img src="component1/images/Portfolio01.png" alt="project 1">
+                                <img src="component1/images/kamar/vip1.jpeg" alt="project 1">
                                 <a href="#single-project" class="more show_hide" rel="#slidingDiv">
                                     <i class="icon-plus"></i>
                                 </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
+                                <h3>Kamar VIP</h3>
+                                <p>Klik untuk Detail...</p>
                                 <div class="mask"></div>
                             </div>
                         </li>
-                        <li class="span4 mix photo">
+                        <li class="span4 mix vip">
                             <div class="thumbnail">
-                                <img src="component1/images/Portfolio02.png" alt="project 2">
+                                <img src="component1/images/kamar/vip2.jpeg" alt="project 2">
                                 <a href="#single-project" class="show_hide more" rel="#slidingDiv1">
                                     <i class="icon-plus"></i>
                                 </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
+                                <h3>Kamar VIP</h3>
+                                <p>Klik untuk Detail...</p>
                                 <div class="mask"></div>
                             </div>
                         </li>
-                        <li class="span4 mix identity">
+                        <li class="span4 mix vip">
                             <div class="thumbnail">
-                                <img src="component1/images/Portfolio03.png" alt="project 3">
+                                <img src="component1/images/kamar/vip3.jpeg" alt="project 3">
                                 <a href="#single-project" class="more show_hide" rel="#slidingDiv2">
                                     <i class="icon-plus"></i>
                                 </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
+                                <h3>Kamar VIP</h3>
+                                <p>Klik untuk Detail...</p>
                                 <div class="mask"></div>
                             </div>
                         </li>
-                        <li class="span4 mix web">
+                        <li class="span4 mix vip">
                             <div class="thumbnail">
-                                <img src="component1/images/Portfolio04.png" alt="project 4">
+                                <img src="component1/images/kamar/vip4.jpeg" alt="project 4">
                                 <a href="#single-project" class="show_hide more" rel="#slidingDiv3">
                                     <i class="icon-plus"></i>
                                 </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
+                                <h3>Kamar VIP</h3>
+                                <p>Klik untuk Detail...</p>
                                 <div class="mask"></div>
                             </div>
                         </li>
-                        <li class="span4 mix photo">
+                        <li class="span4 mix vip">
                             <div class="thumbnail">
-                                <img src="component1/images/Portfolio05.png" alt="project 5">
+                                <img src="component1/images/kamar/vip5.jpeg" alt="project 5">
                                 <a href="#single-project" class="show_hide more" rel="#slidingDiv4">
                                     <i class="icon-plus"></i>
                                 </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
+                                <h3>Kamar VIP</h3>
+                                <p>Klik untuk Detail...</p>
                                 <div class="mask"></div>
                             </div>
                         </li>
-                        <li class="span4 mix identity">
+                        <li class="span4 mix ekonomi">
                             <div class="thumbnail">
-                                <img src="component1/images/Portfolio06.png" alt="project 6">
+                                <img src="component1/images/kamar/eko1.jpeg" alt="project 6">
                                 <a href="#single-project" class="show_hide more" rel="#slidingDiv5">
                                     <i class="icon-plus"></i>
                                 </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
+                                <h3>Kamar Ekonomi</h3>
+                                <p>Klik untuk Detail...</p>
                                 <div class="mask"></div>
                             </div>
                         </li>
-                        <li class="span4 mix web">
+                        <li class="span4 mix ekonomi">
                             <div class="thumbnail">
-                                <img src="component1/images/Portfolio07.png" alt="project 7" />
+                                <img src="component1/images/kamar/eko3.jpeg" alt="project 7" />
                                 <a href="#single-project" class="show_hide more" rel="#slidingDiv6">
                                     <i class="icon-plus"></i>
                                 </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
+                                <h3>Kamar Ekonomi</h3>
+                                <p>Klik untuk Detail...</p>
                                 <div class="mask"></div>
                             </div>
                         </li>
-                        <li class="span4 mix photo">
+                        <li class="span4 mix ekonomi">
                             <div class="thumbnail">
-                                <img src="component1/images/Portfolio08.png" alt="project 8">
+                                <img src="component1/images/kamar/eko4.jpeg" alt="project 8">
                                 <a href="#single-project" class="show_hide more" rel="#slidingDiv7">
                                     <i class="icon-plus"></i>
                                 </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
+                                <h3>Kamar Ekonomi</h3>
+                                <p>Klik untuk Detail...</p>
                                 <div class="mask"></div>
                             </div>
                         </li>
-                        <li class="span4 mix identity">
+                        <li class="span4 mix ekonomi">
                             <div class="thumbnail">
-                                <img src="component1/images/Portfolio09.png" alt="project 9">
+                                <img src="component1/images/kamar/eko5.jpeg" alt="project 9">
                                 <a href="#single-project" class="show_hide more" rel="#slidingDiv8">
                                     <i class="icon-plus"></i>
                                 </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
+                                <h3>Kamar Ekonomi</h3>
+                                <p>Klik untuk Detail...</p>
                                 <div class="mask"></div>
                             </div>
                         </li>
@@ -537,373 +689,148 @@ component1/css/bootstrap.css ')}}" />
         <!-- Portfolio section end -->
         <!-- About us section start -->
         <div class="section primary-section" id="about">
-            <div class="triangle"></div>
+            <div class="triangle"></div> 
             <div class="container">
                 <div class="title">
-                    <h1>Who We Are?</h1>
-                    <p>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
+                    <h1>Tentang Pengembang</h1>
                 </div>
                 <div class="row-fluid team">
-                    <div class="span4" id="first-person">
+                    <div class="span3" id="first-person">
                         <div class="thumbnail">
                             <img src="component1/images/Team1.png" alt="team 1">
-                            <h3>John Doe</h3>
+                            <h3>Arif Fahrizal</h3>
                             <ul class="social">
                                 <li>
-                                    <a href="">
+                                    <a href="https://www.facebook.com/corelzavieralfiansyah">
                                         <span class="icon-facebook-circled"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="">
+                                    <a href="https://twitter.com/young_gneration">
                                         <span class="icon-twitter-circled"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="">
-                                        <span class="icon-linkedin-circled"></span>
+                                    <a href="https://plus.google.com/u/0/105134275472137786170">
+                                        <span class="icon-gplus-circled"></span>
                                     </a>
                                 </li>
                             </ul>
                             <div class="mask">
-                                <h2>Copywriter</h2>
-                                <p>When you stop expecting people to be perfect, you can like them for who they are.</p>
+                                <h2>Programer</h2>
+                                <p>Cukup sulit menemukan kesalahan dalam kode Anda saat Anda mencarinya; Itu lebih sulit lagi bila Anda menganggap kode Anda bebas dari kesalahan.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="span4" id="second-person">
+                    <div class="span3" id="second-person">
                         <div class="thumbnail">
                             <img src="component1/images/Team2.png" alt="team 1">
-                            <h3>John Doe</h3>
+                            <h3>Muhammad Rizal</h3>
                             <ul class="social">
                                 <li>
-                                    <a href="">
+                                    <a href="https://www.facebook.com/ridzalborneo1">
                                         <span class="icon-facebook-circled"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="">
+                                    <a href="https://twitter.com/RizalMhamad8">
                                         <span class="icon-twitter-circled"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="">
-                                        <span class="icon-linkedin-circled"></span>
+                                    <a href="https://plus.google.com/u/0/111240685464209157186">
+                                        <span class="icon-gplus-circled"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="mask">
+                                <h2>Programer</h2>
+                                <p>Debugging dua kali lebih keras seperti menulis kode di tempat pertama. Oleh karena itu, jika Anda menulis kode dengan cerdik mungkin, Anda, menurut definisi, tidak cukup pintar untuk men-debugnya.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span3" id="third-person">
+                        <div class="thumbnail">
+                            <img src="component1/images/Team3.png" alt="team 1">
+                            <h3>Taufikurrahman Khosyi</h3>
+                            <ul class="social">
+                                <li>
+                                    <a href="https://www.facebook.com/TaufikurrahmanKhosyi">
+                                        <span class="icon-facebook-circled"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/KhosyiTaufik">
+                                        <span class="icon-twitter-circled"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://plus.google.com/u/0/113726276910410952294">
+                                        <span class="icon-gplus-circled"></span>
                                     </a>
                                 </li>
                             </ul>
                             <div class="mask">
                                 <h2>Designer</h2>
-                                <p>When you stop expecting people to be perfect, you can like them for who they are.</p>
+                                <p>Seorang desainer tau bahwa desainnya sudah sempurna bukan ketika tidak ada sesuatu yang bisa ditambahkan ke dalam desainnya, melainkan ketika tidak ada sesuatu yang bisa dihilangkan lagi dari desainnya.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="span4" id="third-person">
+                    <div class="span3" id="third-person">
                         <div class="thumbnail">
-                            <img src="component1/images/Team3.png" alt="team 1">
-                            <h3>John Doe</h3>
+                            <img src="component1/images/Team4.png" alt="team 1">
+                            <h3>M. Sarman Noorlah</h3>
                             <ul class="social">
                                 <li>
-                                    <a href="">
+                                    <a href="https://www.facebook.com/sarman.xlite">
                                         <span class="icon-facebook-circled"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="">
+                                    <a href="https://twitter.com/Sarman_Hrc15">
                                         <span class="icon-twitter-circled"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="">
-                                        <span class="icon-linkedin-circled"></span>
+                                    <a href="https://plus.google.com/u/0/113146106916072731346">
+                                        <span class="icon-gplus-circled"></span>
                                     </a>
                                 </li>
                             </ul>
                             <div class="mask">
-                                <h2>Photographer</h2>
-                                <p>When you stop expecting people to be perfect, you can like them for who they are.</p>
+                                <h2>Designer</h2>
+                                <p>Kalau kamu melakukan pekerjaan baik untuk klien yang baik, dia akan memberikanmu pekerjaan baik lainnya untuk klien baik lainnya. Jika kamu melakukan pekerjaan buruk untuk klien yang buruk, dia juga akan memberikanmu pekerjaan buruk lainnya untuk klien buruk lainnya.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="about-text centered">
                     <h3>About Us</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                    <p><strong>Website Paragon Hotel</strong> dikembangkan oleh 4 orang mahasiswa muda berprestasi Fakultas Ilmu Komputer dan Teknologi Informasi. yang sedang menempuh jenjang studi S1 Teknik Informatika, Website ini di buat untuk memenuhi tugas akhir Praktikum Pemrograman Framework, dengan basis Framework Laravel dipadukan dengan penggunaan Bootstrap serta JavaScript menjadikan website ini elegan dan resposive</p>
                 </div>
-                <h3>Skills</h3>
-                <div class="row-fluid">
-                    <div class="span6">
-                        <ul class="skills">
-                            <li>
-                                <span class="bar" data-width="80%"></span>
-                                <h3>Graphic Design</h3>
-                            </li>
-                            <li>
-                                <span class="bar" data-width="95%"></span>
-                                <h3>Html & Css</h3>
-                            </li>
-                            <li>
-                                <span class="bar" data-width="68%"></span>
-                                <h3>jQuery</h3>
-                            </li>
-                            <li>
-                                <span class="bar" data-width="70%"></span>
-                                <h3>Wordpress</h3>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="span6">
-                        <div class="highlighted-box center">
-                            <h1>We're Hiring</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, ullamcorper suscipit lobortis nisl ut aliquip consequat. I learned that we can do anything, but we can't do everything...</p>
-                            <button class="button button-sp">Join Us</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About us section end -->
-        <div class="section secondary-section">
-            <div class="triangle"></div>
-            <div class="container centered">
-                <p class="large-text">Elegance is not the abundance of simplicity. It is the absence of complexity.</p>
-                <a href="#" class="button">Purshase now</a>
-            </div>
-        </div>
-        <!-- Client section start -->
-        <!-- Client section start -->
-        <div id="clients">
-            <div class="section primary-section">
-                <div class="triangle"></div>
-                <div class="container">
-                    <div class="title">
-                        <h1>What Client Say?</h1>
-                        <p>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
-                    </div>
-                    <div class="row">
-                        <div class="span4">
-                            <div class="testimonial">
-                                <p>"I've worked too hard and too long to let anything stand in the way of my goals. I will not let my teammates down and I will not let myself down."</p>
-                                <div class="whopic">
-                                    <div class="arrow"></div>
-                                    <img src="images/Client1.png" class="centered" alt="client 1">
-                                    <strong>John Doe
-                                        <small>Client</small>
-                                    </strong>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="span4">
-                            <div class="testimonial">
-                                <p>"In motivating people, you've got to engage their minds and their hearts. I motivate people, I hope, by example - and perhaps by excitement, by having productive ideas to make others feel involved."</p>
-                                <div class="whopic">
-                                    <div class="arrow"></div>
-                                    <img src="component1/images/Client2.png" class="centered" alt="client 2">
-                                    <strong>John Doe
-                                        <small>Client</small>
-                                    </strong>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="span4">
-                            <div class="testimonial">
-                                <p>"Determine never to be idle. No person will have occasion to complain of the want of time who never loses any. It is wonderful how much may be done if we are always doing."</p>
-                                <div class="whopic">
-                                    <div class="arrow"></div>
-                                    <img src="component1/images/Client3.png" class="centered" alt="client 3">
-                                    <strong>John Doe
-                                        <small>Client</small>
-                                    </strong>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="testimonial-text">
-                        "Perfection is Achieved Not When There Is Nothing More to Add, But When There Is Nothing Left to Take Away"
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="section third-section">
-            <div class="container centered">
-                <div class="sub-section">
-                    <div class="title clearfix">
-                        <div class="pull-left">
-                            <h3>Our Clients</h3>
-                        </div>
-                        <ul class="client-nav pull-right">
-                            <li id="client-prev"></li>
-                            <li id="client-next"></li>
-                        </ul>
-                    </div>
-                    <ul class="row client-slider" id="clint-slider">
-                        <li>
-                            <a href="">
-                                <img src="component1/images/clients/ClientLogo01.png" alt="client logo 1">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="component1/images/clients/ClientLogo02.png" alt="client logo 2">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="component1/images/clients/ClientLogo03.png" alt="client logo 3">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="component1/images/clients/ClientLogo04.png" alt="client logo 4">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="component1/images/clients/ClientLogo05.png" alt="client logo 5">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="component1/images/clients/ClientLogo02.png" alt="client logo 6">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="component1/images/clients/ClientLogo04.png" alt="client logo 7">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- Price section start -->
-        <div id="price" class="section secondary-section">
-            <div class="container">
-                <div class="title">
-                    <h1>Price</h1>
-                    <p>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
-                </div>
-                <div class="price-table row-fluid">
-                    <div class="span4 price-column">
-                        <h3>Basic</h3>
-                        <ul class="list">
-                            <li class="price">$19,99</li>
-                            <li><strong>Free</strong> Setup</li>
-                            <li><strong>24/7</strong> Support</li>
-                            <li><strong>5 GB</strong> File Storage</li>
-                        </ul>
-                        <a href="#" class="button button-ps">BUY</a>
-                    </div>
-                    <div class="span4 price-column">
-                        <h3>Pro</h3>
-                        <ul class="list">
-                            <li class="price">$39,99</li>
-                            <li><strong>Free</strong> Setup</li>
-                            <li><strong>24/7</strong> Support</li>
-                            <li><strong>25 GB</strong> File Storage</li>
-                        </ul>
-                        <a href="#" class="button button-ps">BUY</a>
-                    </div>
-                    <div class="span4 price-column">
-                        <h3>Premium</h3>
-                        <ul class="list">
-                            <li class="price">$79,99</li>
-                            <li><strong>Free</strong> Setup</li>
-                            <li><strong>24/7</strong> Support</li>
-                            <li><strong>50 GB</strong> File Storage</li>
-                        </ul>
-                        <a href="#" class="button button-ps">BUY</a>
-                    </div>
-                </div>
-                <div class="centered">
-                    <p class="price-text">We Offer Custom Plans. Contact Us For More Info.</p>
-                    <a href="#contact" class="button">Contact Us</a>
-                </div>
-            </div>
-        </div>
-        <!-- Price section end -->
-        <!-- Newsletter section start -->
-        <div class="section third-section">
-            <div class="container newsletter">
-                <div class="sub-section">
-                    <div class="title clearfix">
-                        <div class="pull-left">
-                            <h3>Newsletter</h3>
-                        </div>
-                    </div>
-                </div>
-                <div id="success-subscribe" class="alert alert-success invisible">
-                    <strong>Well done!</strong>You successfully subscribet to our newsletter.</div>
-                <div class="row-fluid">
-                    <div class="span5">
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                    </div>
-                    <div class="span7">
-                        <form class="inline-form">
-                            <input type="email" name="email" id="nlmail" class="span8" placeholder="Enter your email" required />
-                            <button id="subscribe" class="button button-sp">Subscribe</button>
-                        </form>
-                        <div id="err-subscribe" class="error centered">Please provide valid email address.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+               
         <!-- Newsletter section end -->
         <!-- Contact section start -->
         <div id="contact" class="contact">
             <div class="section secondary-section">
+            <div class="triangle"></div>
                 <div class="container">
                     <div class="title">
-                        <h1>Contact Us</h1>
-                        <p>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
+                        <h1>Hubungi Kami    </h1>
+                        <p>Paragon Hotel Siap Melayani dengan sepenuh hati dengan pelayanan yang memuaskan</p>
                     </div>
                 </div>
                 <div class="map-wrapper">
                     <div class="map-canvas" id="map-canvas">Loading map...</div>
-                    <div class="container">
-                        <div class="row-fluid">
-                            <div class="span5 contact-form centered">
-                                <h3>Say Hello</h3>
-                                <div id="successSend" class="alert alert-success invisible">
-                                    <strong>Well done!</strong>Your message has been sent.</div>
-                                <div id="errorSend" class="alert alert-error invisible">There was an error.</div>
-                                <form id="contact-form" action="php/mail.php">
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <input class="span12" type="text" id="name" name="name" placeholder="* Your name..." />
-                                            <div class="error left-align" id="err-name">Please enter name.</div>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <input class="span12" type="email" name="email" id="email" placeholder="* Your email..." />
-                                            <div class="error left-align" id="err-email">Please enter valid email adress.</div>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <textarea class="span12" name="comment" id="comment" placeholder="* Comments..."></textarea>
-                                            <div class="error left-align" id="err-comment">Please enter your comment.</div>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <button id="send-mail" class="message-btn">Send message</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="container">
                     <div class="span9 center contact-info">
-                        <p>123 Fifth Avenue, 12th,Belgrade,SRB 11000</p>
-                        <p class="info-mail">ourstudio@somemail.com</p>
-                        <p>+11 234 567 890</p>
-                        <p>+11 286 543 850</p>
+                        <p>Jl. Kuaro, Gunung Kelua, Samarinda Ulu, Gn. Kelua, Samarinda Ulu, Kota Samarinda, Kalimantan Timur 75119</p>
+                        <p class="info-mail">info@paragonhotel.co.id</p>
+                        <p>Tel : (62-263) 5241110</p>
+                        <p>Fax : (62-263) 5241112</p>
                         <div class="title">
-                            <h3>We Are Social</h3>
+                            <h3>Sosial Media Kami</h3>
                         </div>
                     </div>
                     <div class="row-fluid centered">
@@ -946,7 +873,7 @@ component1/css/bootstrap.css ')}}" />
         <!-- Contact section edn -->
         <!-- Footer section start -->
         <div class="footer">
-            <p>&copy; 2013 Theme by <a href="http://www.graphberry.com">GraphBerry</a>, <a href="http://goo.gl/NM84K2">Documentation</a></p>
+            <p>&copy; 2017 Edited By Kelompok 2 C1 2015</p>
         </div>
         <!-- Footer section end -->
         <!-- ScrollUp button start -->

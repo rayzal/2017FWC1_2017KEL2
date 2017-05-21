@@ -26,9 +26,10 @@ class karyawanRequest extends Request
        $validasi= [
         'nama_karyawan'=>'required',
         'alamat_karyawan'=>'required',
-        'no_telepon_karyawan'=>'required|integer',
+        'no_telepon_karyawan'=>'required|regex:/(08)[0-9]{10}/',
         'email'=>'required',
         'username'=>'required',
+        'password'=>'required',
         ];
         if($this->is('karyawan/tambah')){
             $validasi['password']='required';
@@ -36,3 +37,4 @@ class karyawanRequest extends Request
         return $validasi; 
     }
 }
+

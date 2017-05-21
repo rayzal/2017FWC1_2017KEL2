@@ -27,7 +27,7 @@ class karyawanController extends Controller
     }
     public function simpan(karyawanRequest $input)
     {   
-        $pengguna = new Pengguna($input->only('username','password','email'));
+        $pengguna = new Pengguna($input->only('username','password','email','level'));
         if ($pengguna->save()){
         $karyawan = new karyawan;
         $karyawan -> nama_karyawan = $input->nama_karyawan;

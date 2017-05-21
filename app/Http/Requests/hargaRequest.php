@@ -24,7 +24,7 @@ class hargaRequest extends Request
     public function rules()
     {
         $validasi= [
-        'harga_kamar'=>'required|integer',
+        'harga_kamar'=>'required|numeric',
         'hari'=>'required',
         ];
         

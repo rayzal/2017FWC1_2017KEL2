@@ -23,8 +23,9 @@ class check_outRequest extends Request
      */
     public function rules()
     {
+        
          $validasi= [
-        'tgl_check_out'=>'required',
+        'tgl_check_out'=>'required|after:today',
         'transaksi_id'=>'required',
         ];
         

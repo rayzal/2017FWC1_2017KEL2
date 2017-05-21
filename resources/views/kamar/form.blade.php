@@ -22,7 +22,7 @@
 <div class="form-group">
 	<label class="col-sm-2 control-label">Harga Kamar</label>
 	<div class="col-sm-10">
-	{!! Form::select('harga_id',$harga->lists('harga_kamar','id'),null,['class'=>'form-control','id'=>'harga_id','placeholder'=>"Harga"]) !!}
+	{!! Form::text('harga_kamar',null,['class'=>'form-control','placeholder'=>"Harga Kamar"]) !!}
 	</div>
 	</div>
 

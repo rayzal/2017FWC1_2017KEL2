@@ -29,7 +29,7 @@
              <td>{{$kamar->id or 'id kosong'}}</td>
               <td>{{$kamar->kode_kamar or 'kode_kamar kosong'}}</td>
                <td>{{$kamar->type_kamar or 'type_kamar kosong'}}</td>
-                <td>{{$kamar->harga->harga_kamar or 'harga kamar kosong'}}</td>
+                <td>{{$kamar->harga_kamar or 'harga kamar kosong'}}</td>
                  
                   
                <td>

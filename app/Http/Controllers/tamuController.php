@@ -26,6 +26,12 @@ class tamuController extends Controller
     {
         return view('tamu.tambah');
     }
+    public function daftar()
+    {
+        return view('tamu.daftar');
+    }
+
+
     public function simpan(TamuRequest $input)
     {   
         $pengguna = new Pengguna($input->only('username','password','email'));
@@ -44,6 +50,30 @@ class tamuController extends Controller
      // $informasi = $tamu ->save()?'Berhasil simpan data': 'Gagal simpan data';
         return redirect('tamu')->with(['informasi'=>$this->informasi]);
     }
+
+    // Register Oleh Tamu
+    public function simpantamu(TamuRequest $input)
+
+    {  
+        
+        $pengguna = new Pengguna($input->only('username','password','email','level'));
+        if ($pengguna->save()){
+        $tamu = new tamu;
+        $tamu -> nama_tamu = $input->nama_tamu;
+        $tamu -> no_identitas_tamu = $input->no_identitas_tamu;
+        $tamu -> alamat_tamu = $input->alamat_tamu;
+        $tamu -> no_telepon_tamu = $input->no_telepon_tamu;
+        $tamu -> email = $input->email;
+      
+        // $tamu -> pengguna_id = $input->pengguna_id;
+        if ($pengguna->tamu()->save($tamu))
+            $this->informasi='Berhasil simpan data';
+            }
+        
+     // $informasi = $tamu ->save()?'Berhasil simpan data': 'Gagal simpan data';
+        return redirect('lamantamu')->with(['informasi'=>$this->informasi]);
+    }
+
     public function edit($id){
         $tamu = tamu::find($id);
         return view('tamu.edit')->with(array('tamu'=>$tamu));

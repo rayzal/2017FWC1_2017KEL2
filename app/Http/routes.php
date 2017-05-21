@@ -11,9 +11,34 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('login');
+// });
+
+
+
+Route::get('/index', function () {
+	return view('index');
 });
+
+Route::get('/lamandaftartamu', function () {
+	return view('register');
+});
+
+Route::get('/lamantamu', function () {
+	return view('lamantamu');
+});
+
+
+Route::get('/login','SesiController@form');
+Route::post('/login','SesiController@validasi');
+Route::get('/logout','SesiController@logout');
+Route::get('/','SesiController@index');
+
+
+Route::group(['middleware'=>'AutentifikasiUser'], function()
+{
+
 
 Route::get('/admin', function () {
     return view('admin');
@@ -22,9 +47,11 @@ Route::get('/admin', function () {
 Route::get('/master', function () {
     return view('master');
 });
-Route::get('/index', function () {
-    return view('index');
+
+Route::get('/tamulogin', function () {
+    return view('tamulogin');
 });
+
 
 
 
@@ -57,6 +84,7 @@ Route::get('tamu','tamuController@awal');
 Route::get('tamu/tambah','tamuController@tambah');
 Route::get('tamu/lihat/{tamu}','tamuController@lihat');
 Route::post('tamu/simpan','tamuController@simpan');
+Route::post('tamu/register','tamuController@simpantamu');
 Route::get('tamu/edit/{tamu}','tamuController@edit');
 Route::post('tamu/edit/{tamu}','tamuController@update');
 Route::get('tamu/hapus/{tamu}','tamuController@hapus');
@@ -68,7 +96,6 @@ Route::post('fasilitas/simpan','fasilitasController@simpan');
 Route::get('fasilitas/edit/{fasilitas}','fasilitasController@edit');
 Route::post('fasilitas/edit/{fasilitas}','fasilitasController@update');
 Route::get('fasilitas/hapus/{fasilitas}','fasilitasController@hapus');
-
 
 Route::get('fasilitas_kamar','fasilitas_kamarController@awal');
 Route::get('fasilitas_kamar/tambah','fasilitas_kamarController@tambah');
@@ -109,3 +136,5 @@ Route::post('transaksi/simpan','transaksiController@simpan');
 Route::get('transaksi/edit/{transaksi}','transaksiController@edit');
 Route::post('transaksi/edit/{transaksi}','transaksiController@update');
 Route::get('transaksi/hapus/{transaksi}','transaksiController@hapus');
+
+});
