@@ -26,7 +26,7 @@ class kamarRequest extends Request
         $validasi= [
         'kode_kamar'=>'required',
         'type_kamar'=>'required',
-        'harga_kamar'=>'required',
+        'harga_kamar'=>'required|min:4',
         ];
         
         return $validasi;

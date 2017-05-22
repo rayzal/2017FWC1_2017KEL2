@@ -24,10 +24,10 @@ class karyawanRequest extends Request
     public function rules()
     {
        $validasi= [
-        'nama_karyawan'=>'required',
+        'nama_karyawan'=>'required|regex:/^[\pL\s]+$/u',
         'alamat_karyawan'=>'required',
         'no_telepon_karyawan'=>'required|regex:/(08)[0-9]{10}/',
-        'email'=>'required',
+        'email'=>'required|email|unique:karyawan,email',
         'username'=>'required',
         'password'=>'required',
         ];

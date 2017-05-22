@@ -10,6 +10,8 @@ use App\tamu;
 
 use App\pengguna;
 
+use Hash;
+
 use App\Http\Requests\TamuRequest;
 
 class tamuController extends Controller

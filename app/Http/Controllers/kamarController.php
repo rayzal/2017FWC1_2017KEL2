@@ -33,7 +33,7 @@ class kamarController extends Controller
         $kamar = new kamar;
         $kamar ->kode_kamar = $input->kode_kamar;
         $kamar ->type_kamar = $input->type_kamar;
-        $kamar ->harga_id = $input->harga_id;
+        $kamar ->harga_kamar = $input->harga_kamar;
         $informasi = $kamar->save() ? 'Berhasil simpan data': 'gagal simpan data';
         return redirect('kamar')->with(['informasi'=>$informasi]);
       }
@@ -57,7 +57,7 @@ class kamarController extends Controller
         
         $kamar ->kode_kamar = $input->kode_kamar;
         $kamar ->type_kamar = $input->type_kamar;
-        $kamar ->harga_id = $input->harga_id;
+        $kamar ->harga_kamar = $input->harga_kamar;
       
       $informasi = $kamar->save() ? 'Berhasil update data': 'Gagal Update data';
         return redirect('kamar')->with(['informasi'=>$informasi]);

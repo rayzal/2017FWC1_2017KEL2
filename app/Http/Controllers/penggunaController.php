@@ -8,6 +8,8 @@ use App\Http\Requests;
 
 use App\pengguna;
 
+// use Hash;
+
 class penggunaController extends Controller
 {
     public function awal()
@@ -24,8 +26,8 @@ class penggunaController extends Controller
          // 
     
          $this->validate($input,[
-            'username'=>'required',
-            'email'=>'required',
+            'username'=>'required|unique:pengguna,username|regex:/^[\pL\s]+$/u|',
+            'email'=>'required|email|unique:pengguna,email',
             'password'=>'required',
             'level'=>'required|numeric',
             ]);
@@ -38,6 +40,7 @@ class penggunaController extends Controller
     	$pengguna -> username = $input->username;
         $pengguna -> email = $input->email;
         $pengguna -> password = $input->password;
+        // $pengguna -> password = Hash::make('password');
         $pengguna -> level = $input->level;
         
      $informasi = $pengguna ->save()?'Berhasil simpan data': 'Gagal simpan data';
@@ -56,8 +59,8 @@ class penggunaController extends Controller
     public  function update($id, Request $input){
 
          $this->validate($input,[
-            'username'=>'required',
-            'email'=>'required',
+            'username'=>'required|unique:pengguna,username|regex:/^[\pL\s]+$/u',
+            'email'=>'required|email|unique:pengguna,email',
             'password'=>'required',
             'level'=>'required|numeric',
             ]);
@@ -66,8 +69,9 @@ class penggunaController extends Controller
         $pengguna -> username = $input->username;
         $pengguna -> email = $input->email;
         $pengguna -> password = $input->password;
+        // $pengguna -> password = Hash::make('password');
         $pengguna -> level = $input->level;
-        
+                
      $informasi = $pengguna ->save()?'Berhasil update data': 'Gagal update data';
         return redirect('pengguna')->with(['informasi'=>$informasi]);
 }

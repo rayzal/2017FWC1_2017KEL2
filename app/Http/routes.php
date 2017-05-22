@@ -35,7 +35,6 @@ Route::post('/login','SesiController@validasi');
 Route::get('/logout','SesiController@logout');
 Route::get('/','SesiController@index');
 
-
 Route::group(['middleware'=>'AutentifikasiUser'], function()
 {
 
@@ -51,8 +50,6 @@ Route::get('/master', function () {
 Route::get('/tamulogin', function () {
     return view('tamulogin');
 });
-
-
 
 
 Route::get('pengguna','penggunaController@awal');
@@ -137,4 +134,4 @@ Route::get('transaksi/edit/{transaksi}','transaksiController@edit');
 Route::post('transaksi/edit/{transaksi}','transaksiController@update');
 Route::get('transaksi/hapus/{transaksi}','transaksiController@hapus');
 
-});
+} );

@@ -10,6 +10,8 @@ use App\karyawan;
 
 use App\pengguna;
 
+use Hash;
+
 use App\Http\Requests\karyawanRequest;
 
 

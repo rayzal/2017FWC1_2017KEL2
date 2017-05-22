@@ -24,11 +24,11 @@ class TamuRequest extends Request
     public function rules()
     {
         $validasi= [
-        'nama_tamu'=>'required',
-        'no_identitas_tamu'=>'required|numeric',
+        'nama_tamu'=>'required|regex:/^[\pL\s]+$/u',
+        'no_identitas_tamu'=>'required|numeric|min:5',
         'alamat_tamu'=>'required',
         'no_telepon_tamu'=>'required|regex:/(08)[0-9]{10}/',
-        'email'=>'required',
+        'email'=>'required|email|unique:tamu,email',
         'username'=>'required',
         'password'=>'required',
         ];

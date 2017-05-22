@@ -49,16 +49,16 @@ class SesiController extends Controller
                 return redirect('/lamantamu')->with('informasi',"Selamat Datang ".Auth::user()->username);
         }
     }
-        return redirect('/')->withErrors(['Pengguna Tidak Di Temukan/Password Salah']);
+        return redirect('index')->withErrors(['Pengguna Tidak Di Temukan/Password Salah']);
         
     }
 
     public function logout(){
         if(Auth::check()){
             Auth::logout();
-            return redirect('/')->withErrors(['Silahkan Login Untuk Masuk Ke sistem']);
+            return redirect('index')->withErrors(['Silahkan Login Untuk Masuk Ke sistem']);
           }else{
-             return redirect('/')->withErrors(['Silahkan Login terlebih dahulu']);
+             return redirect('index')->withErrors(['Silahkan Login terlebih dahulu']);
           }
         }  
 }
